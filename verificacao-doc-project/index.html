@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Autenticidade - Carteira de Identidade Nacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rawline', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1351b4 0%, #071d41 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(to right, #1351b4, #155bcb);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .brasao {
+            width: 80px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .status-badge {
+            background: #0c8a2b;
+            color: white;
+            padding: 15px 30px;
+            margin: 30px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(12, 138, 43, 0.3);
+        }
+
+        .status-badge::before {
+            content: "✓ ";
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            color: #1351b4;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1351b4;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .alert-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .alert-box p {
+            color: #856404;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .verification-steps {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .verification-steps h4 {
+            color: #1351b4;
+            margin-bottom: 15px;
+        }
+
+        .verification-steps ol {
+            margin-left: 20px;
+            color: #333;
+        }
+
+        .verification-steps li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .flag-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .flag-img {
+            width: 50px;
+            height: auto;
+        }
+
+        .gov-logo {
+            color: #1351b4;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>REPÚBLICA FEDERATIVA DO BRASIL</h1>
+            <p>Verificação de Autenticidade de Documento</p>
+        </div>
+
+        <!-- Status Badge -->
+        <div class="status-badge">
+            DOCUMENTO AUTÊNTICO E VÁLIDO
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Dados do Titular -->
+            <div class="section">
+                <h2 class="section-title">Dados do Titular</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Nome Completo</div>
+                        <div class="info-value">THIAGO CURI DE OLIVEIRA</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">CPF</div>
+                        <div class="info-value">137.277.836-56</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Data de Nascimento</div>
+                        <div class="info-value">26/01/2008</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Naturalidade</div>
+                        <div class="info-value">Belo Horizonte/MG</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Nacionalidade</div>
+                        <div class="info-value">Brasileira</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Estado Civil</div>
+                        <div class="info-value">Solteiro(a)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações do Documento -->
+            <div class="section">
+                <h2 class="section-title">Informações do Documento</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Tipo de Documento</div>
+                        <div class="info-value">Carteira de Identidade Nacional (CIN)</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Registro Geral (RG)</div>
+                        <div class="info-value">13.727.783-6</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Órgão Emissor</div>
+                        <div class="info-value">Instituto de Identificação - PCMG</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Estado Emissor</div>
+                        <div class="info-value">Minas Gerais</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Data de Emissão</div>
+                        <div class="info-value">17/12/2025</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Data de Validade</div>
+                        <div class="info-value">17/12/2035</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Status</div>
+                        <div class="info-value" style="color: #0c8a2b; font-weight: 600;">ATIVO</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Data de Compartilhamento</div>
+                        <div class="info-value">16/01/2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filiação -->
+            <div class="section">
+                <h2 class="section-title">Filiação</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Mãe</div>
+                        <div class="info-value">Daniella Briuzzi Curi Oliveira</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Pai</div>
+                        <div class="info-value">Marcelo Augusto Mourão de Oliveira</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dados Complementares -->
+            <div class="section">
+                <h2 class="section-title">Dados Complementares</h2>
+                <div class="info-item">
+                    <div class="info-label">Doador de Órgãos</div>
+                    <div class="info-value">SIM</div>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <div class="info-label">Certidão de Nascimento/Casamento/Averb./Divórcio</div>
+                    <div class="info-value">NASC.633118D155200810096127304750766</div>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <div class="info-label">Número MRZ (Machine Readable Zone)</div>
+                    <div class="info-value" style="font-family: monospace; font-size: 14px;">
+                        IDBRA13727783661372778365656<<<9
+                    </div>
+                </div>
+            </div>
+
+            <!-- Validade Jurídica -->
+            <div class="section">
+                <h2 class="section-title">Validade Jurídica</h2>
+                <div class="alert-box">
+                    <strong>Documento Oficial</strong>
+                    <p>
+                        Este documento digital possui <strong>validade jurídica para identificação do titular 
+                        em todo território nacional</strong>, não sendo necessária a apresentação de documento 
+                        complementar, conforme estabelecido pelo <strong>Decreto nº 10.977, de 23 de fevereiro 
+                        de 2022</strong>.
+                    </p>
+                </div>
+                <p style="margin-top: 15px; color: #333; line-height: 1.6;">
+                    O documento foi <strong>assinado digitalmente por GOV.BR</strong> e compartilhado através 
+                    do aplicativo oficial da Carteira de Identidade Nacional.
+                </p>
+            </div>
+
+            <!-- Verificação de Autenticidade -->
+            <div class="section">
+                <h2 class="section-title">Verificação de Autenticidade</h2>
+                <div class="verification-steps">
+                    <h4>Como verificar a autenticidade deste documento:</h4>
+                    <ol>
+                        <li><strong>Via QR Code:</strong> Utilize o aplicativo oficial "Carteira de Identidade Nacional" disponível para Android e iOS para ler o QR Code presente no documento original</li>
+                        <li><strong>Via Portal Gov.br:</strong> Acesse <a href="https://validar.iti.gov.br" style="color: #1351b4;">https://validar.iti.gov.br</a> e insira os dados de verificação fornecidos</li>
+                        <li><strong>Assinatura Digital:</strong> A assinatura digital pode ser verificada diretamente no portal do ITI (Instituto Nacional de Tecnologia da Informação)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Avisos Importantes -->
+            <div class="section">
+                <h2 class="section-title">Avisos Importantes</h2>
+                <ul style="color: #333; line-height: 1.8; margin-left: 20px;">
+                    <li>Este é um documento oficial emitido pela Polícia Civil do Estado de Minas Gerais</li>
+                    <li>A falsificação, adulteração ou uso indevido deste documento constitui crime previsto nos artigos 297 e 304 do Código Penal Brasileiro</li>
+                    <li>Qualquer alteração neste documento após sua emissão invalida completamente sua autenticidade</li>
+                    <li>Em caso de dúvidas sobre a autenticidade, entre em contato com o órgão emissor ou verifique através dos canais oficiais</li>
+                    <li>Este documento contém elementos de segurança digital que podem ser verificados a qualquer momento</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="flag-footer">
+                <div>
+                    <div class="gov-logo">GOV.BR</div>
+                    <p style="margin-top: 5px;">Governo Federal - República Federativa do Brasil</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px; font-size: 12px;">
+                Documento emitido em conformidade com a legislação brasileira sobre identificação civil 
+                e assinaturas eletrônicas (Lei nº 14.063/2020)
+            </p>
+        </div>
+    </div>
+</body>
+</html>
